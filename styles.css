@@ -23,6 +23,17 @@ body{
 .icon-cart:hover{
     cursor: pointer;
 }
+.logo-title{
+    display: flex;
+}
+.logo {
+    width: 50px;
+    padding: 2px;
+
+}
+.title{
+    padding: 5px;
+}
 
 img{
     max-width: 100%;
@@ -178,14 +189,14 @@ header{
 }
 
 .price{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 900;
+    text-align: center;
 }
 
 .info-product button{
-    border: none;
-    background: none;
-    background-color: #000;
+    border-radius: 8%;
+    background-color: #18479c;
     color: #fff;
     padding: 15px 10px;
     cursor: pointer;
