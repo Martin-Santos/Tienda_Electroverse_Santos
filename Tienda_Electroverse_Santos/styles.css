@@ -32,9 +32,10 @@ body{
 
 
 ul {
-    
-    flex-direction: row;
+    padding: 15px 0px 0px 0px ;
+    display: flex;
     list-style-type: none;
+    justify-content: space-between;
 }
 
 .icon-cart:hover{
@@ -46,6 +47,7 @@ ul {
 .logo {
     width: 50px;
     padding: 2px;
+    border-radius: 50%;
 
 }
 .title{
@@ -60,8 +62,24 @@ img{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 30px 0;
+    padding: 20px 0 20px 0;
     background-color: aquamarine;
+}
+header .link-tienda{
+    padding: 0px 0px 0px 15px;
+    text-decoration: none;
+}
+header .link-TV{
+    padding: 0px 0px 0px 15px;
+    text-decoration: none;
+}
+header .link-Moviles{
+    padding: 0px 0px 0px 15px;
+    text-decoration: none;
+}
+header .link-Electrodomesticos{
+    padding: 0px 0px 0px 15px;
+    text-decoration: none;
 }
 
 .container-icon{
@@ -72,9 +90,15 @@ header{
 
 .botones-header{
     padding: 10px;
+    border-radius: 15px;
 }
 
 /* Main */
+.body{
+    margin: auto;
+    align-items: center;
+    width: 1200px;
+}
 .container-items{
     padding: 20px 0 0 0;
     display: grid;
