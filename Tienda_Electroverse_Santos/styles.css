@@ -8,6 +8,7 @@
 }
 
 body{
+    background-color: #FFF1DC;
     margin: 0 auto;
     font-family: 'Lato';
     color: #333;
@@ -41,6 +42,29 @@ ul {
 .icon-cart:hover{
     cursor: pointer;
 }
+
+.title{
+    font-family: 'Bruno Ace', cursive;
+    font-size: x-large;
+    padding-top: 10px;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Header */
+header{
+    background-color: #3A98B9;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 2;
+}
 .logo-title{
     display: flex;
 }
@@ -50,20 +74,15 @@ ul {
     border-radius: 50%;
 
 }
-.title{
-    padding: 5px;
-}
-
-img{
-    max-width: 100%;
-}
-
-/* Header */
-header{
+header ul {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    padding: 20px 0 20px 0;
-    background-color: aquamarine;
+}
+header ul li {
+    padding: 5px 30px;
+}
+header ul li a{
+    text-decoration: none;
 }
 header .link-tienda{
     padding: 0px 0px 0px 15px;
@@ -98,8 +117,8 @@ header .link-Electrodomesticos{
 
 .container {
 	position: absolute;
-	left: 91%;
-	top: 3.2%;
+	left: 85%;
+	top: 6.3%;
 	transform: translate(-50%,-50%);
 	padding: 10px;
 }
@@ -107,7 +126,7 @@ header .link-Electrodomesticos{
 input {
 	outline: none;
 	box-sizing: border-box;
-	height: 60px;
+	height: 40px;
 	width: 0px;
 	padding: 0 20px;
 	color: #000;
@@ -125,10 +144,10 @@ input {
 	position: absolute;
 	right: 0px;
 	top: 0px;
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	background-color: rgb(127, 189, 255);
-	line-height: 80px;
+	line-height: 50px;
 	border-radius: 50%;
 	text-align: center;
 	cursor: pointer;
@@ -138,7 +157,7 @@ input {
 .btn i {
 	font-size: 25px;
 	color: white;
-	line-height: 80px;
+	line-height: 50px;
 	transition: all .7s ease;
 }
 
@@ -155,7 +174,16 @@ input {
 }
 
 
-
+.dropdown__menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+}
+.dropdown__menu ul {
+    display: block;
+}
 
 
 
@@ -167,7 +195,7 @@ input {
 .body{
     margin: auto;
     align-items: center;
-    width: 1200px;
+    max-width: 80vw;
 }
 .container-items{
     padding: 20px 0 0 0;
@@ -182,6 +210,7 @@ input {
 
 .item:hover{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    z-index: 1;
 }
 
 .item img{
@@ -224,7 +253,10 @@ input {
     padding: 15px 10px;
     cursor: pointer;
 }
+
 .info-product a{
     text-decoration: none;
     color: #555;
 }
+
+
