@@ -76,27 +76,35 @@ header{
     border-radius: 50%;
 
 }
+.search{
+    display: flex;
+    
+}
 .search input{
     width: 300px;
     padding: 10px;
-    border-radius: 10px;
     border: none;
 }
-.icon-search{
-    position: relative;
-    left: 0px;
+.search .icon-search{
+    padding: 10px;
+    background-color: #005a9a;
+    
+}
+
+.search .icon-search a{
+    
     color: #FFF;
 }
 
 .container-icon{
     display: flex;
-    position: relative;
     
-    
-     
 }
 .container-icon div a{
     color: #FFF;
+}
+.container-icon .icon-user{
+    padding-left: 100%;
 }
 
 /* Header Inferior */
