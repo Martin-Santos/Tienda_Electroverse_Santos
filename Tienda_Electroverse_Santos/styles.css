@@ -13,71 +13,62 @@ body{
     font-family: 'Lato';
     color: #333;
 }
-.navbar{
-    display: flex;
-    
-}
-.icon-cart{
-    position: absolute;
-    top: 17px;
-    right: 50px;
-    width: 40px;
-    height: 40px;
-    stroke: #000;
-}
-.icon-user{
-    position: absolute;
-    top: 17px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    stroke: #000;
-}
-.icon-search {
-    width: 40px;
-    height: 40px;
-    stroke: #000;
 
-}
+
+
 
 
 ul {
-    align-items: center;
     list-style-type: none;
-    justify-content: space-between;
-}
-
-.icon-cart:hover{
-    cursor: pointer;
 }
 
 .title{
     font-family: 'Bruno Ace', cursive;
     font-size: x-large;
     padding-top: 10px;
+    
 }
 
 img{
     max-width: 100%;
 }
 
-/* Header */
+
 header{
-    background-color: #3A98B9;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5%;
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    position: fixed;
+    background-color: #3A98B9;
     z-index: 2;
+    
 }
+
+/* Header Superior*/
+
+.header_superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.header_superior .icon-cart{
+    color: #FFF;
+}
+.icon-user{
+    color: #FFF;
+}
+
 .logo-title{
     display: flex;
 }
-.logo-title title{
+.logo-title a{
     text-decoration: none;
+    color: #fffcfc;
+
 }
 .logo {
     width: 50px;
@@ -85,119 +76,215 @@ header{
     border-radius: 50%;
 
 }
-header ul {
-    list-style: none;
-    display: flex;
+.search input{
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
 }
-header ul li {
-    padding: 5px 30px;
-}
-header ul li a{
-    text-decoration: none;
-}
-header .link-tienda{
-    padding: 0px 0px 0px 15px;
-    text-decoration: none;
-}
-header .link-TV{
-    padding: 0px 0px 0px 15px;
-    text-decoration: none;
-}
-header .link-Moviles{
-    padding: 0px 0px 0px 15px;
-    text-decoration: none;
-}
-header .link-Electrodomesticos{
-    padding: 0px 0px 0px 15px;
-    text-decoration: none;
+.icon-search{
+    position: relative;
+    left: 0px;
+    color: #FFF;
 }
 
 .container-icon{
     display: flex;
     position: relative;
+    
+    
+     
+}
+.container-icon div a{
+    color: #FFF;
+}
+
+/* Header Inferior */
+.container__menu{
+    width: 100%;
+    height: 70px;
+    background: #18479c;
+    padding: 0 20px;
+    font-family: 'Bruno Ace', cursive;
+}
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+nav{
+    height: 100%;
+}
+nav > ul {
+    height: 100%;
+    display: flex;
+}
+nav > ul > li{
+    height: 100%;
+    position: relative;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background: #0074c7;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Sub Menu*/
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+nav ul li ul::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+nav ul li ul li a{
+    display: block;
+    color: #0099e9;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+nav ul li ul li a:hover{
+    background: #0074c7;
+    color: #FFF;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); 
 }
 
 
-.botones-header{
-    padding: 10px;
-    border-radius: 15px;
+/* ELEMENTOS REPONSIVE*/
+
+.icon__menu{
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+#label__check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .search input{
+        display: none;
+    }
+    .header_superior{
+        padding: 10px;
+    }
+    .logo-title{
+        width: 200px;
+    }
+    nav > ul {
+        flex-direction: column;
+        background-color: #023877;
+        position: fixed;
+        left: 0;
+        top: 158px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+    nav ul li ul{
+        left: 90px;
+    }
+    nav > ul > li:hover ul{
+        top: 50px;
+    }
+    #label__check{
+        display: block;
+    }
+    .icon__menu{
+        display: flex;
+    }
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    
+    }
 }
 
 
-/* Searcher */
 
-.container {
-	position: absolute;
-	left: 85%;
-	top: 6.3%;
-	transform: translate(-50%,-50%);
-	padding: 10px;
-}
-
-input {
-	outline: none;
-	box-sizing: border-box;
-	height: 40px;
-	width: 0px;
-	padding: 0 20px;
-	color: #000;
-	border-radius: 50px;
-	font-size: 20px;
-	border: 1px solid #D50000;
-	transition: all .7s ease;
-}
-
-::placeholder {
-	color: grey;
-}
-
-.btn {
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	width: 60px;
-	height: 60px;
-	background-color: rgb(127, 189, 255);
-	line-height: 50px;
-	border-radius: 50%;
-	text-align: center;
-	cursor: pointer;
-	transition: .5s;
-}
-
-.btn i {
-	font-size: 25px;
-	color: white;
-	line-height: 50px;
-	transition: all .7s ease;
-}
-
-.container:hover input {
-	width: 350px;
-}
-
-.container:hover i{
-	transform: rotate(-360deg);
-}
-
-.btn:hover{
-	background: #cc0000;
-}
 
 
 /* Slider */
 
 
 .slider{
-    width: 85%;
+    width: 80vw;
+    border-radius: 5%;
     margin: auto;
     overflow: hidden;
+    padding-top: 8%;
+    
+    
+    
 }
 .slider ul {
     padding: 0;
     display: flex;
     width: 400%;
-
     animation: cambio 20s infinite alternate linear;
 }
 .slider li {
@@ -205,6 +292,7 @@ input {
     list-style: none;
 }
 .slider img {
+    
     width: 100%;
 }
 
@@ -234,8 +322,7 @@ input {
     max-width: 80vw;
 }
 .container-items{
-    position: relative;
-    top: 60px;
+    padding-top: 11%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -255,7 +342,6 @@ input {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
     transition: all .5s;
 }
 
@@ -298,12 +384,22 @@ input {
 }
 
 .botonesmain{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.botonesmain button{
+    padding: 20px;
+    border-radius: 20px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
     position: relative;
     left: 50%;
-    border-radius: 8px;
-    background-color: #18479c;
-    color: #fff;;
-    cursor: pointer;
+    z-index: 2;
+    box-shadow: 6px 6px 12px #0074c7;
+    
+     
 }
 
 
