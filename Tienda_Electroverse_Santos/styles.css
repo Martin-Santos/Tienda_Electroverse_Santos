@@ -411,13 +411,16 @@ nav ul li ul li a:hover{
 }
 /* Inicio de sesión */
 
-body{
+#body_usuario{
     background-image: url(./multimedia/img_fondo_electroverse_grande\ \(1\).png);
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+.formulario{
+    
 }
 
 
